@@ -1,11 +1,12 @@
 # Installation of Lineage 17x (Android10) for Xperia XZ2 (Android9) using Windows computer
 Following instructions describe how to achieve installation of a custom Android 10 ROM for Xperia XZ2
-I like Lineage on my phones, so I choose this rom:
-https://forum.xda-developers.com/xperia-xz2/development/rom-lineageos-17-1-t4044653
-Notice that I used this guide to install it on a Xperia XZ2 dual (H8296) withstock rom Android 9 with unlocked bootloader. You can skip some parts of this guide when you have differenet prerequisite like already Android 10 installed, or bootloader already unlocked. Also I didnt provide ALL download links to the tools and framework. You can find them yourself by googling or just use the versions I used and added in this repository. Those may be out of date soon, because I wont keep them up to date. You have been warned ;)
+I like Lineage on my phones, so I choose this rom:  
+https://forum.xda-developers.com/xperia-xz2/development/rom-lineageos-17-1-t4044653  
 
-Credit goes to Raphos which posted the main part of the guide above. You can find the original post here:
-https://forum.xda-developers.com/showpost.php?p=82312489&postcount=268
+Notice that I used this guide to install it on a Xperia XZ2 dual (H8296) with stock rom Android 9 with unlocked bootloader. You can skip some parts of this guide when you have differenet prerequisite like already Android 10 installed, or bootloader already unlocked. Also I didnt provide download links to the tools and framework. You can find them yourself by googling or just use the versions I used and added in this repository. Those may be out of date soon, because I wont keep them up to date. You have been warned ;)
+
+Credit goes to Raphos which posted the main part of the guide above. You can find the original post here:  
+https://forum.xda-developers.com/showpost.php?p=82312489&postcount=268  
 
 
 ## Prerequisites:
