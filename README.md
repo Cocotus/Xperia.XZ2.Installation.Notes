@@ -7,6 +7,7 @@ Notice that I used this guide to install it on a Xperia XZ2 dual (H8296) withsto
 Credit goes to Raphos which posted the main part of the guide above. You can find the original post here:
 https://forum.xda-developers.com/showpost.php?p=82312489&postcount=268
 
+
 ## Prerequisites:
 - Install ADB Commandline and Fastboot tools (___platform-tools_r30.0.0-windows.zip___) on your computer: https://wiki.lineageos.org/adb_fastboot_guide.html  
 I extracted the zip into folder: ___C:\adb-fastboot\___  like described in the above guide.
@@ -21,6 +22,10 @@ ___lineage-17.1-20200414-UNOFFICIAL-akari_RoW.zip___
 For my modell Xperia XZ2 dual (H8296) the correct file at that time was: 
 ___SW_binaries_for_Xperia_Android_10.0.7.1_r1_v5a_tama___
 However please download the the version which was published before the publishing date of lineage rom to avoid conflicts!!
+- Get the correct TWRP file. I downloaded mine here: https://forum.xda-developers.com/showpost.php?p=82134687&postcount=2  
+https://androidfilehost.com/?w=files&flid=306953   
+___2020-04-13_20-20-56_twrp_sodp_xz2.tar.gz___
+
 
 ### Install stock Android 10 firmware using Newflasher and XperiFirm
 - XperiFirm (I used: XperiFirm_5.4.0_(by_Igor_Eisberg)):   
@@ -39,10 +44,8 @@ After that boot into system and check if everything is installed (Android 10).
 - With your code you can now unlock bootloader via fastboot with command from console:  
 ```adb reboot bootloader```  
 ```fastboot oem unlock YOURCODE```
-. Create the .img files of new ROM with payload dumper
-- Extract lineage-17.1-20200414-UNOFFICIAL-apollo_RoW.zip and put the payload.bin into payload_dumper folder (I put it into adb folder)
 
-### Preparing LINEAGE files:
+### Preparing LINEAGE files with payload dumper:
 - Extract the zipped lineage image and move the payload.bin to folder C:\adb-fastboot\payload_dumper     
 - Use following commands from console:  
 ```cd C:\adb-fastboot\payload_dumper\```  
@@ -68,6 +71,8 @@ This will put the files in payload_dumper/output/ folder: boot, dtbo, system, vb
 ```fastboot boot C:\adb-fastboot\payload_dumper\output\twrp_sodp\twrp-xz2.img```  
 
 - That will start the TWRP. In TWRP do the following installations:
-flash sony-dualsim-patcher-v4.zip
-flash newest magisk.zip
-reboot system
+1. flash sony-dualsim-patcher-v4.zip
+2. flash newest magisk.zip
+3. reboot system
+
+DONE! 
