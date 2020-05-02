@@ -57,6 +57,12 @@ This will put the files in payload_dumper/output/ folder: boot, dtbo, system, vb
 
 ### Installation of LINEAGE:
 - Use following commands from console:  
+```fastboot erase boot_a```  
+```fastboot erase cache```  
+```fastboot erase system_a```  
+```fastboot erase userdata```  
+```fastboot erase boot_b```  
+```fastboot erase system_b```  
 ```fastboot flash boot C:\adb-fastboot\payload_dumper\output\boot.img```  
 ```fastboot flash dtbo C:\adb-fastboot\payload_dumper\output\dtbo.img```  
 ```fastboot flash system C:\adb-fastboot\payload_dumper\output\system.img```  
