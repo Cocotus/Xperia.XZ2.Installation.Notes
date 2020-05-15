@@ -8,7 +8,6 @@ Notice that I used this guide to install it on a Xperia XZ2 dual (H8296) with st
 Credit goes to Raphos which posted the main part of the guide above. You can find the original post here:  
 https://forum.xda-developers.com/showpost.php?p=82312489&postcount=268  
 
-
 ## Prerequisites:
 - Install ADB Commandline and Fastboot tools (___platform-tools_r30.0.0-windows.zip___) on your computer: https://wiki.lineageos.org/adb_fastboot_guide.html  
 I extracted the zip into folder: ___C:\adb-fastboot\___  like described in the above guide.
@@ -83,3 +82,17 @@ This will put the files in payload_dumper/output/ folder: boot, dtbo, system, vb
 3. reboot system
 
 DONE! 
+
+
+## Updating Lineage/ROM:
+- reboot into Lineage recovery mode
+- adb sideload C:\adb-fastboot\payload_dumper\output\lineage-17.1-20200511-UNOFFICIAL-akari_RoW.zip
+- ```adb reboot bootloader```
+- ```fastboot flash oem_a C:\adb-fastboot\payload_dumper\output\SW_binaries_for_Xperia_Android_10.0.7.1_r1_v5a_tama.img``` 
+- ```fastboot flash oem_b C:\adb-fastboot\payload_dumper\output\SW_binaries_for_Xperia_Android_10.0.7.1_r1_v5a_tama.img``` `  
+- Now we are going to boot from TWRP to install/flash zip files! For that I put the extracted twrp package into C:\adb-fastboot\payload_dumper\output\twrp_sodp\twrp-xz2.img and used commands:  
+```fastboot --disable-verity --disable-verification flash vbmeta C:\adb-fastboot\payload_dumper\output\twrp_sodp\vbmeta.img```  
+```fastboot boot C:\adb-fastboot\payload_dumper\output\twrp_sodp\twrp-xz2.img```  
+- That will start the TWRP. In TWRP do the following installations:
+1. flash sony-dualsim-patcher-v4.zip
+2. flash newest magisk.zip
